@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  cheeseria:
+    build: .
+    container_name: cheeseria_c
+    ports:
+      - "9000:9000"
+    volumns:
+      - .:/app
+      - ./app/node_modules
+    stdin_open: true
+    tty: true
